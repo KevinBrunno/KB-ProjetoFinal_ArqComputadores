@@ -44,7 +44,6 @@ def verificar_arquivo(total):
                 else:
                     total = 0
             if int(linha[0]) == total:
-                print(linha[1:]) # Teste Print info
                 msgm1 = "Processador:\n\nModelo:\n\nFrequência:\n\nMemória Cache:\n\nMotivo:\n"
                 msgm2 = f"{linha[1]}\n\n{linha[2]}\n\n{linha[3]}\n\n{linha[4]}\n\n{linha[5]}\n"
                 ttk.Label(frm1, foreground='turquoise4', background='azure3', text=msgm1,
@@ -64,16 +63,12 @@ def sobre():
 
 
 window = Tk()
-#window.title("Projeto Final - Arquitetura_de_Computadores 2024")
 window.title("Projeto Final - Módulo de escolha da CPU")
 window.geometry('800x500')
 window.resizable(False, False) #Torna a janela "non-resizable"
 
 frm1 = Frame(window, borderwidth=2, relief="solid", bg='azure3')
 frm1.place(x=1,y=1, width=798, height=460)
-
-#ttk.Label(frm1, background='azure2', text="SELECIONE AS OPÇÕES DESEJADAS", foreground='turquoise4',
-#          font = 'Arial 16 bold').grid(column = 0, row=2, padx=15, pady=55, sticky=N, ipady=5)
 
 # Componentes visuais da interface(Labels e 1 "botão" inativo)
 btt_panel = Button(frm1,text="SELECIONE AS OPÇÕES DESEJADAS", borderwidth=2, foreground='turquoise3', state='disabled',
@@ -95,9 +90,6 @@ ttk.Label(frm1, background='azure3', text = "Custo:",
 ttk.Label(frm1, background='azure3', text = "Uso específico:", 
           font = ("Times New Roman", 15)).grid(column = 0, 
           row = 8, padx = 10, pady = 15)
-
-# Cor da ComboBox
-#frm1.option_add("*TCombobox*Listbox*Background", 'turquoise4') 
 
 # Widget de ComboBox para cada um dos Requisitos da CPU
 n = StringVar()
