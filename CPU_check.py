@@ -55,7 +55,7 @@ def info():
     info1="Básico: Uso comum do dia a dia e trabalho convencional.\n\n"
     info2="Intermediário: Jogos(Requisitos mínimos ou recomendados) e\nProgramas mais exigentes.\n\n"
     info3="Avançado: Jogos mais recentes \ne/ou exigentes\n( >= Requisitos recomendados)\n"
-    messagebox.showinfo(title="Info", message=info1 + info2 + info3 +"ou Programas pesados e tarefas específicos")
+    messagebox.showinfo(title="Info", message=info1 + info2 + info3 +"ou Programas pesados e tarefas específicas")
 
 def sobre():
     msg1="UFG - INF 2024\nArquitetura de Computadores\nProfessora: Bruna Michelly\n\n"
