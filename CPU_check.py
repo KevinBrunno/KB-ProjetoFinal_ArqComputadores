@@ -26,30 +26,43 @@ def salvar_arquivo():
     verificar_arquivo(total)
 
 
-# O arquivo "conf.csv" deve estar presente para o pleno funcionamento
-#   da função "verificar_arquivo()"
+# Os arquivos "conf.csv" e "conf2.csv" devem estar presentes para o pleno funcionamento
+# da função "verificar_arquivo()"
 
 def verificar_arquivo(total):
     with open("conf.csv", "r", encoding="utf-8") as arq2:
         dados = csv.reader(arq2)
-        for linha in dados:
-            # Se 0 <= valor <= 2 ; valor = 0 
-            # Se 3 <= valor <= 6 ; valor = 4    
-            # Se o valor for 7, ele é arredondado para cima; valor = 8
-            if total < 8:
-                if (total <=6) and (total >=3):
-                    total = 4
-                elif(total == 7):
-                    total = 8
-                else:
-                    total = 0
-            if int(linha[0]) == total:
-                msgm1 = "Processador:\n\nModelo:\n\nFrequência:\n\nMemória Cache:\n\nTDP:\n\nMotivo:\n"
-                msgm2 = f"{linha[1]}\n\n{linha[2]}\n\n{linha[3]}\n\n{linha[4]}\n\n{linha[5]}\n\n{linha[6]}\n"
-                ttk.Label(frm1, foreground='deepskyblue4', background='powderblue', text=msgm1, border=30,
-                          font=("Times New Roman", 15)).grid(column=0, row=5, padx=10, pady=10, ipady=50)
-                ttk.Label(frm1, foreground='darkblue', background='azure', text=msgm2, border=30,
-                          font=("Times New Roman", 15)).grid(column=1, row=5, padx=2, pady=10, ipady=50, ipadx=192)
+        
+        arq3 = open("conf2.csv", "r", encoding="utf-8")
+        dados2 = csv.reader(arq3)
+
+        # Se 0 <= valor <= 2 ; valor = 0 
+        # Se 3 <= valor <= 6 ; valor = 4    
+        # Se o valor for 7, ele é arredondado para cima; valor = 8
+        if total < 8:
+            if (total <=6) and (total >=3):
+                total = 4
+            elif(total == 7):
+                total = 8
+            else:
+                total = 0
+
+        for linha2 in dados2:
+            for linha in dados:
+                if int(linha[0]) == total:
+                    msgm1 = "Processador:\n\nModelo:\n\nFrequência:\n\nMemória Cache:\n\nTDP:\n\nMotivo:\n"
+                    msgm2 = f"{linha[1]}\n\n{linha[2]}\n\n{linha[3]}\n\n{linha[4]}\n\n{linha[5]}\n\n{linha[6]}\n"
+                    ttk.Label(frm1, foreground='deepskyblue4', background='powderblue', text=msgm1, border=30,
+                              font=("Times New Roman", 15)).grid(column=0, row=5, padx=10, pady=10, ipady=50)
+                    ttk.Label(frm1, foreground='darkblue', background='azure', text=msgm2, border=30,
+                              font=("Times New Roman", 15)).grid(column=1, row=5, padx=2, pady=10, ipady=50, ipadx=65)
+                    break
+            if int(linha2[0]) == total:
+                msgm3 = f"{linha2[1]}\n\n{linha2[2]}\n\n{linha2[3]}\n\n{linha2[4]}\n\n{linha2[5]}\n\n{linha2[6]}\n"
+                ttk.Label(frm1, foreground='darkblue', background='azure', text=msgm3, border=30,
+                          font=("Times New Roman", 15)).grid(column=2, row=5, padx=2, pady=10, ipady=50, ipadx=65)
+                break
+        arq3.close()
 
 def info():
     info1="Básico: Uso comum do dia a dia e trabalho convencional.\n\n"
