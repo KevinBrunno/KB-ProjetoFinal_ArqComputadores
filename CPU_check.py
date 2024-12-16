@@ -44,12 +44,12 @@ def verificar_arquivo(total):
                 else:
                     total = 0
             if int(linha[0]) == total:
-                msgm1 = "Processador:\n\nModelo:\n\nFrequência:\n\nMemória Cache:\n\nMotivo:\n"
-                msgm2 = f"{linha[1]}\n\n{linha[2]}\n\n{linha[3]}\n\n{linha[4]}\n\n{linha[5]}\n"
-                ttk.Label(frm1, foreground='turquoise4', background='azure3', text=msgm1,
-                          font=("Times New Roman", 15)).grid(column=0, row=5, padx=10, pady=10)
-                ttk.Label(frm1, foreground='darkblue', background='azure3', text=msgm2,
-                          font=("Times New Roman", 15)).grid(column=1, row=5, padx=15, pady=10)
+                msgm1 = "Processador:\n\nModelo:\n\nFrequência:\n\nMemória Cache:\n\nTDP:\n\nMotivo:\n"
+                msgm2 = f"{linha[1]}\n\n{linha[2]}\n\n{linha[3]}\n\n{linha[4]}\n\n{linha[5]}\n\n{linha[6]}\n"
+                ttk.Label(frm1, foreground='deepskyblue4', background='powderblue', text=msgm1, border=30,
+                          font=("Times New Roman", 15)).grid(column=0, row=5, padx=10, pady=10, ipady=50)
+                ttk.Label(frm1, foreground='darkblue', background='azure', text=msgm2, border=30,
+                          font=("Times New Roman", 15)).grid(column=1, row=5, padx=2, pady=10, ipady=50, ipadx=192)
 
 def info():
     info1="Básico: Uso comum do dia a dia e trabalho convencional.\n\n"
