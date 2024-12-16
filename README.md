@@ -2,8 +2,8 @@
 Projeto Final da disciplina de Arquitetura de Computadores - UFG 2024
 
 
-Programa de *moódulo de escolha de CPU* com um interface gráfica bem simples
-feita em Python com Tkinter.
+Programa de Módulo de **Escolha de CPU** com um interface gráfica bem simples
+feita em Python com **Tkinter**.
 
 Antes de rodar o programa note que é preciso que o código fonte **"CPU_check.py"**
 esteja junto aos arquivos **"conf.csv"** e **"conf2.csv"** em um mesmo diretório.
