@@ -14,3 +14,7 @@ No linux: **$ python3 CPU_check.py**
 
 No Windows : **$ python CPU_check.py**
              ou   $ py CPU_check.py
+
+**PODE SER QUE O TKINTER NÃO ESTEJA INSTALADO EM ALGUMAS VERSÕES DE PYTHON,
+QUE VEM PRÉ-INSTALADAS EM ALGUMAS DISTROS, PARA VERIFICAR DIGITE O SEGUINTE
+COMANDO: $   python3 -m tkinter**
